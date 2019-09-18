@@ -8,10 +8,10 @@ const resolvers = {
     strategies: (_, __, { dataSources }) => dataSources.strategyApi.getStrategies(),
     strategy: (_, { id }, { dataSources }) => dataSources.strategyApi.getStrategy(id),
     recommendedStrategies: (_, __, { dataSources }) => dataSources.strategyApi.getRecommendedStrategies(),
-    topStrategies: (_, {limit = 6}, { dataSources }) => dataSources.strategyApi.getTopStrategies(limit)
+    topStrategies: (_, { limit = 6 }, { dataSources }) => dataSources.strategyApi.getTopStrategies(limit)
   },
   Mutation: {
-    addAuthor: (_, input, { dataSources }) => dataSources.authorApi.addAuthor(input),
+    addAuthor: (_, input, { dataSources }) => dataSources.authorApi.addAuthor(input)
   }
 };
 

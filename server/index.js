@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
 
-const typeDefs  = require('./shema');
+const typeDefs = require('./shema');
 const resolvers = require('./resolvers');
 
 const MarketProvider = require('./datasources/providers/market');

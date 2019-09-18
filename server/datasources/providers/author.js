@@ -9,8 +9,6 @@ class AuthorProvider extends RESTDataSource {
 
   willSendRequest(request) {
     request.headers.set('Content-Type', 'application/json');
-
-    console.log(request)
   }
 
   async getAuthors(){
@@ -30,7 +28,7 @@ class AuthorProvider extends RESTDataSource {
     const data = JSON.stringify(input);
     const response = await this.post(`authors/request`,data );
 
-    console.log(response);
+    return response.response;
   }
 
 }
